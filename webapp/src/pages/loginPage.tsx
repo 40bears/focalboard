@@ -41,11 +41,16 @@ const LoginPage = () => {
     return (
         <div className='LoginPage'>
             <form
+                className='loginForm'
                 onSubmit={(e: React.FormEvent) => {
                     e.preventDefault()
                     handleLogin()
                 }}
             >
+                <img
+                    className='logo'
+                    src='/static/40b-logo.png'
+                />
                 <div className='title'>
                     <FormattedMessage
                         id='login.log-in-title'
@@ -85,7 +90,10 @@ const LoginPage = () => {
                     />
                 </Button>
             </form>
-            <Link to='/register'>
+            <Link
+                className='registerLink'
+                to='/register'
+            >
                 <FormattedMessage
                     id='login.register-button'
                     defaultMessage={'or create an account if you don\'t have one'}

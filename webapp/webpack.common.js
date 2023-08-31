@@ -51,6 +51,7 @@ function makeCommonConfig() {
                     use: [
                         'style-loader',
                         'css-loader',
+                        'postcss-loader',
                         'sass-loader',
                     ],
                 },
@@ -59,6 +60,7 @@ function makeCommonConfig() {
                     use: [
                         'style-loader',
                         'css-loader',
+                        'postcss-loader',
                     ],
                 },
                 {

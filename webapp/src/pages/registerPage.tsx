@@ -88,7 +88,10 @@ const RegisterPage = () => {
                     {'Register'}
                 </Button>
             </form>
-            <Link to='/login'>
+            <Link
+                className='signinLink'
+                to='/login'
+            >
                 <FormattedMessage
                     id='register.login-button'
                     defaultMessage={'or log in if you already have an account'}
