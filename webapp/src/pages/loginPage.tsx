@@ -3,6 +3,7 @@
 import React, {useState} from 'react'
 import {Link, Redirect, useLocation, useHistory} from 'react-router-dom'
 import {FormattedMessage} from 'react-intl'
+import {Helmet} from 'react-helmet'
 
 import {useAppDispatch, useAppSelector} from '../store/hooks'
 import {fetchMe, getLoggedIn} from '../store/users'
@@ -40,6 +41,9 @@ const LoginPage = () => {
 
     return (
         <div className='LoginPage'>
+            <Helmet>
+                <body className='focalboard-body focalboard-body--public-page'/>
+            </Helmet>
             <form
                 className='loginForm'
                 onSubmit={(e: React.FormEvent) => {

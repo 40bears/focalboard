@@ -30,6 +30,10 @@
         padding-top: 10px;
     }
 
+    .logo {
+        @apply w-full h-auto mb-8;
+    }
+
     .title {
         @apply text-3xl font-bold mb-4 text-gray-700;
     }
