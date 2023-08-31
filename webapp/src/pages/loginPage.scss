@@ -33,9 +33,7 @@
     }
 
     .logo {
-        width: 100%;
-        height: auto;
-        margin-bottom: 16px;
+        @apply w-full h-auto mb-8;
     }
 
 

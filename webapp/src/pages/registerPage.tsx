@@ -3,6 +3,7 @@
 import React, {useState} from 'react'
 import {useHistory, Link, Redirect} from 'react-router-dom'
 import {FormattedMessage} from 'react-intl'
+import {Helmet} from 'react-helmet'
 
 import {useAppDispatch, useAppSelector} from '../store/hooks'
 import {fetchMe, getLoggedIn} from '../store/users'
@@ -44,12 +45,19 @@ const RegisterPage = () => {
 
     return (
         <div className='RegisterPage'>
+            <Helmet>
+                <body className='focalboard-body focalboard-body--public-page'/>
+            </Helmet>
             <form
                 onSubmit={(e: React.FormEvent) => {
                     e.preventDefault()
                     handleRegister()
                 }}
             >
+                <img
+                    className='logo'
+                    src='/static/40b-logo.png'
+                />
                 <div className='title'>
                     <FormattedMessage
                         id='register.signup-title'
