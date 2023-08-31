@@ -305,7 +305,7 @@
         &-buttons {
             display: flex;
             align-items: center;
-            justify-content: start;
+            @apply justify-start;
         }
     }
 

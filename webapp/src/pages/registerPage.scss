@@ -9,13 +9,12 @@
     align-items: center;
     justify-content: flex-start;
     flex-direction: column;
-    box-shadow: rgba(var(--center-channel-color-rgb), 0.1) 0 0 0 1px,
-        rgba(var(--center-channel-color-rgb), 0.3) 0 4px 8px;
+    @apply shadow-lg bg-white;
 
     form {
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         justify-content: center;
     }
 
@@ -32,14 +31,13 @@
     }
 
     .title {
-        font-size: 16px;
-        font-weight: 500;
+        @apply text-3xl font-bold mb-4 text-gray-700;
     }
 
     .email,
     .username,
     .password {
-        margin-bottom: 10px;
+        @apply mb-3 w-4/5;
 
         label {
             display: inline-block;
@@ -48,11 +46,10 @@
 
         input {
             display: inline-block;
-            width: 250px;
             border: 1px solid #ccc;
             border-radius: 4px;
             min-height: 44px;
-            padding: 7px;
+            @apply bg-white text-black px-3 py-2 w-full;
         }
     }
 
@@ -60,7 +57,15 @@
         margin-top: 10px;
         margin-bottom: 20px;
         min-height: 38px;
-        min-width: 250px;
+        @apply w-4/5;
+    }
+
+     .signinLink {
+        @apply text-gray-900 transition-all;
+
+        &:hover {
+            @apply text-sky-400;
+        }
     }
 
     .error {
